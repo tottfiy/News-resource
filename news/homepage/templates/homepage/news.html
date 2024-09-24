@@ -19,10 +19,11 @@
 </div>
 
 <ul>
-    <li id="newstext">Останні 10 новин</li>
+    <li id="newstext">Усі новини</li>
     {% for new in news %}
     <li class="news-item">
         <a href="/news/{{ new.id }}" class="news-link">
+            <div class="news-id">#{{ new.id }}</div>
         <div class="news-name">{{ new.name }}</div>
         <div class="news-meta">{{ new.author }} - {{ new.date }}</div>
         <div class="news-text">{{ new.text|slice:"0:100" }}...</div>
@@ -30,9 +31,6 @@
     </li>
     {% endfor %}
 </ul>
-<div id="bottom-button">
-    <button name="View All News"><a href="/news">Переглянути всі новини</a></button>
-</div>
 
 </body>
 </html>

@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from  homepage.models import News, Authors
+
+admin.site.register(News)
+admin.site.register(Authors)
