@@ -11,7 +11,7 @@ class News(models.Model):
         return (f'{self.name}, '
                 f'{self.author}, '
                 f'{self.date}, '
-                f'({self.text})')
+                f'{self.text}')
 
 
 class Authors(models.Model):
